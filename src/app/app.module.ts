@@ -29,7 +29,8 @@ import { ComentsComponent } from './pages/coments/coments.component';
     ComentsComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
