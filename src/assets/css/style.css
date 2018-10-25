@@ -366,7 +366,7 @@ ul.sidebar-menu li a{
 }
 
 ul.sidebar-menu li a.active, ul.sidebar-menu li a:hover, ul.sidebar-menu li a:focus {
-    background: #4ECDC4;
+    background: #ff0000;
     color: #fff;
     display: block;
 
@@ -415,8 +415,8 @@ ul.sidebar-menu li a.active i {
 }
 
 .black-bg {
-    background: #22242a;
-    border-bottom: 1px solid #393d46;
+    background: #000000;
+    border-bottom: 1px solid #ffffff;
 }
 
 .wrapper {
@@ -447,7 +447,7 @@ a.logo:hover, a.logo:focus {
 }
 
 a.logo span {
-    color: #4ECDC4;
+    color: #FF0000;
 }
 
 
@@ -3320,7 +3320,8 @@ ul.chat-available-user li a:hover {
 
 /*footer*/
 .site-footer {
-    background: #4ECDC4;
+    background: 
+    #bbaeab;
     color: #fff;
     padding: 15px 0;
 }
