@@ -1,10 +1,441 @@
+<section class="wrapper site-min-height">
+      <div class="row mt">
+       
+        <!-- /col-lg-12 -->
+        <div class="col-lg-12 mt">
+          <div class="row content-panel">
+            <div class="panel-heading">
+              <ul class="nav nav-tabs nav-justified">
+                <li class="active">
+                  <a data-toggle="tab" href="#edificio"><i class="fa fa-building"></i>  Edificio</a>
+                </li>
+                <li>
+                  <a data-toggle="tab" href="#vigilancia"><i class="fa fa-shield"></i>  Vigilancia</a>
+                </li>
+                <li>
+                  <a data-toggle="tab" href="#facturas"><i class="fa fa-pie-chart"></i>  Facturas</a>
+                </li>
+              </ul>
+            </div>
+            <!-- /panel-heading -->
+            <div class="panel-body">
+              <div class="tab-content">
+                <div id="edificio" class="tab-pane active">
 
-<br>
-<br>
-<br>
-<br>
-<br>
 
-<p>
-  deptos works!
-</p>
+                    <div class="col-lg-8 col-lg-offset-2 detailed">
+                        <h4 class="mb">Departamentos</h4>
+                      </div>
+                
+                  
+                    <div class="row mt"> 
+                        <div class="col-md-12">
+                            <div class="content-panel-2"> 
+                                
+
+                                    
+
+
+                                <table id="tabla" class="table">
+
+                                    <thead>
+                                        <tr class="encabezado">
+                                            <th width="50" style="text-align: center" >N°</th>
+                                            <th width="300" style="text-align: center"> RESPONSABLE</th>
+                                            <th width="300" colspan="2" style="text-align: center"> CONTACTO</th>
+                                            <th width="100" style="text-align: center"> NOVIEMBRE</th>
+                                            <th width="100" style="text-align: center"> EXTRA EDIFICIO</th>
+                                            <th width="100" style="text-align: center"> DICIEMBRE</th>
+                                            <th width="100" style="text-align: center"> EXTRA EDIFICIO</th>
+                                            
+                                          </tr>
+            
+                                      <tr *ngFor="let persona of infoService.deptos">
+                                        <td class="ColumnaLetra" align="center"># {{ persona.numero }}</td>
+                                        <td class="ColumnaA" align="center">{{ persona.responsable }}</td>
+                                        <td class="ColumnaB" width="150" align="center">{{ persona.telefono }}</td>
+                                        <td class="ColumnaC" width="150" align="center">{{ persona.correo }}</td>
+                                        <td class="ColumnaD" align="center">{{ persona.saldo }}</td>
+                                        <td class="ColumnaE" align="center">{{ persona.extra }}</td>
+                                        <td class="ColumnaF" align="center"></td>
+                                        <td class="ColumnaG" align="center"></td>
+                                      </tr>
+                                  
+                                      <tr class="Total">
+                                        <td class="Total A" align="center"></td>
+                                        <td class="Total B" align="center"></td>
+                                        <td class="Total C" align="center"></td>
+                                        <td class="Total D" align="center"></td>
+                                        <td class="Total E" align="center"></td>
+                                        <td class="Total F" align="center"></td>
+                                        <td class="Total G" align="center"></td>
+                                        <td class="Total H" align="center"></td>
+                                        
+                                      </tr>
+                                  
+                                    </thead>
+                                  </table>
+
+                      </div>
+                    </div>
+                    </div>
+
+
+                  <!-- /edificio -->
+                </div>
+                <!-- /tab-pane -->
+                <div id="vigilancia" class="tab-pane">
+                  <div class="row">
+                      <div class="col-lg-8 col-lg-offset-2 detailed">
+                          <h4 class="mb">Vigilantes</h4>
+                        </div>
+                        <div > 
+                        <div >
+                            <div class="content-panel-2"> 
+                                
+
+                                    
+
+
+                                <table id="tabla" class="table">
+
+                                    <thead>
+                                        <tr class="encabezado">
+                                            <th style="text-align: center"></th>
+                                            <th style="text-align: center"> MARIO ESPINOZA</th>
+                                            <th style="text-align: center"> DANIEL ESPINOZA</th>
+                                          </tr>
+
+
+                                          <tr>
+                                              <td align="center"></td>
+                                              <td align="center"><i class="fa fa-phone"></i> 2228970383</td>
+                                              <td align="center"><i class="fa fa-phone"></i> 2227499113</td>
+                                           
+                                            </tr>
+            
+                                      <tr>
+                                        <td align="center">Trabajo</td>
+                                        <td align="center"><select class="form-control">
+                                                    
+                                            <option>Bueno</option>
+                                            <option>Malo</option>                                                  
+                                          </select></td>
+                                        <td align="center"><select class="form-control">
+                                                    
+                                            <option>Bueno</option>
+                                            <option>Malo</option>                                                  
+                                          </select></td>
+                                     
+                                      </tr>
+                                      <tr>
+                                          <td align="center">Limpieza</td>
+                                          <td align="center"><select class="form-control">
+                                                    
+                                                  <option>Bueno</option>
+                                                  <option>Malo</option>                                                  
+                                                </select></td>
+                                          <td align="center"><select class="form-control">
+                                                    
+                                                  <option>Bueno</option>
+                                                  <option>Malo</option>                                                  
+                                                </select></td>
+                                       
+                                        </tr>
+                                        <tr>
+                                            <td align="center">Puntualidad</td>
+                                            <td align="center"><select class="form-control">
+                                                    
+                                                  <option>Bueno</option>
+                                                  <option>Malo</option>                                                  
+                                                </select></td>
+                                            <td align="center"><select class="form-control">
+                                                    
+                                                  <option>Bueno</option>
+                                                  <option>Malo</option>                                                  
+                                                </select></td>
+                                         
+                                          </tr>
+                                          <tr>
+                                              <td align="center">Amabilidad</td>
+                                              <td align="center"><select class="form-control">
+                                                    
+                                                  <option>Bueno</option>
+                                                  <option>Malo</option>                                                  
+                                                </select></td>
+                                              <td align="center"><select class="form-control">
+                                                    
+                                                  <option>Bueno</option>
+                                                  <option>Malo</option>                                                  
+                                                </select></td>
+                                           
+                                            </tr>
+
+                                            <tr>
+                                                <td align="center">Quejas</td>
+                                                <td align="center"><input type="text" class="form-control"></td>
+                                                <td align="center"><input type="text" class="form-control"></td>
+                                             
+                                              </tr>
+
+                                              <tr>
+                                                <td align="center"></td>
+                                                <td align="center"><button class="btn btn-sm btn-theme03">EVALUAR</button></td>
+                                                <td align="center"><button class="btn btn-sm btn-theme03">EVALUAR</button></td>
+                                             
+                                              </tr>
+                                  
+                                    
+                                  
+                                    </thead>
+                                  </table>
+
+                      </div>
+                    </div>
+                    </div>
+
+                        <div class="col-lg-8 col-lg-offset-2 detailed">
+                            <h4 class="mb">Limpieza</h4>
+                          </div>
+
+                         
+                                  <div class="content-panel-2"> 
+                                      
+      
+                                          
+      
+      
+                                      <table id="tabla" class="table">
+      
+                                          <thead>
+                                              <tr class="encabezado">
+                                                  <th style="text-align: center"></th>
+                                                  <th style="text-align: center"> MARY</th>
+                                                </tr>
+
+                                                <tr>
+                                                    <td align="center"></td>
+                                                    <td align="center"><i class="fa fa-phone"></i> 2228710490</td>
+                                                 
+                                                  </tr>
+                  
+                                            <tr>
+                                              <td align="center">Trabajo</td>
+                                              <td align="center">
+                                                <select class="form-control">
+                                                    
+                                                  <option>Bueno</option>
+                                                  <option>Malo</option>                                                  
+                                                </select>
+                                              </td>
+                                           
+                                            </tr>
+                                            <tr>
+                                                <td align="center">Limpieza</td>
+                                                <td align="center"><select class="form-control">
+                                                    
+                                                    <option>Bueno</option>
+                                                    <option>Malo</option>                                                  
+                                                  </select></td>
+                                             
+                                              </tr>
+                                              <tr>
+                                                  <td align="center">Puntualidad</td>
+                                                  <td align="center"><select class="form-control" >
+                                                      
+                                                      <option>Bueno</option>
+                                                      <option>Malo</option>                                                  
+                                                    </select></td>
+                                               
+                                                </tr>
+                                                <tr>
+                                                    <td align="center">Amabilidad</td>
+                                                    <td align="center"><select class="form-control">
+                                                       
+                                                        <option>Bueno</option>
+                                                        <option>Malo</option>                                                  
+                                                      </select></td>
+                                                 
+                                                  </tr>
+      
+                                                  <tr>
+                                                      <td align="center">Quejas</td>
+                                                      <td align="center"><input type="text" class="form-control"></td>
+                                                   
+                                                    </tr>
+                                        
+                                                    <tr>
+                                                        <td align="center"></td>
+                                                        <td align="center"><button class="btn btn-sm btn-theme03">EVALUAR</button></td>
+                                                     
+                                                      </tr>
+                                          
+                                        
+                                          </thead>
+                                        </table>
+                                        <div class="pull-right">
+                                            
+                                          </div>
+      
+                            </div>
+                          
+
+
+
+                  </div>
+                  <!-- /row -->
+                </div>
+                <!-- /tab-pane -->
+                <div id="facturas" class="tab-pane">
+                  <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2 detailed">
+                      <h4 class="mb">Cargar Factura</h4>
+                      <form role="form" class="form-horizontal">
+                        <div class="form-group">
+                          <label class="col-lg-2 control-label"> Archivo</label>
+                          <div class="col-lg-6">
+                            <input type="file" id="exampleInputFile" class="file-pos">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="col-lg-2 control-label">Categoria</label>
+                          <div class="col-lg-6">
+                            <select class="form-control">
+                                                       
+                              <option>Luz</option>
+                              <option>Vigilantes</option> 
+                              <option>Limpieza</option> 
+                              <option>Jardinero</option> 
+                              <option>Extras</option> 
+                              <option>Pasto</option> 
+                              <option>Pintura</option> 
+                              <option>Caseta</option>                                                  
+                            </select>
+                          </div>
+                        </div>
+                       
+                        <div class="form-group">
+                          <label class="col-lg-2 control-label">Descripción</label>
+                          <div class="col-lg-10">
+                            <textarea rows="10" cols="30" class="form-control" id="" name=""></textarea>
+                          </div>
+                        </div>
+
+                        <button type="button" class="btn btn-primary btn-lg" style="float:right">Subir</button>
+
+                      </form>
+                    </div>
+                    <div class="col-lg-8 col-lg-offset-2 detailed mt">
+                      <h4 class="mb">Facturas</h4>
+
+                      <div class="row mt"> 
+                          <div class="col-md-12">
+                              <div class="content-panel-2"> 
+                                  
+  
+                                      
+  
+  
+                                  <table id="tabla" class="table">
+  
+                                      <thead>
+                                          <tr class="encabezado">
+                                              <th width="50" style="text-align: center" > GASTOS</th>
+                                              <th width="300" style="text-align: center"> NOVIEMBRE</th>
+                                              <th width="300"style="text-align: center"> DICIEMBRE</th>
+                                            </tr>
+              
+                                        <tr>
+                                          <td align="center">LUZ</td>
+                                          <td align="center"></td>
+                                          <td align="center"></td>
+                                          
+                                          
+                                        </tr>
+                                    
+                                        <tr>
+                                            <td align="center">VIGILANTES</td>
+                                            <td align="center"></td>
+                                            <td align="center"></td>
+                                            
+                                            
+                                          </tr>
+                                          <tr>
+                                              <td align="center">LIMPIEZA</td>
+                                              <td align="center"></td>
+                                              <td align="center"></td>
+                                              
+                                              
+                                            </tr>
+                                            <tr>
+                                                <td align="center">JARDINERO</td>
+                                                <td align="center"></td>
+                                                <td align="center"></td>
+                                                
+                                                
+                                              </tr>
+                                              <tr>
+                                                  <td align="center">  </td>
+                                                  <td align="center"></td>
+                                                  <td align="center"></td>
+                                                  
+                                                  
+                                                </tr>
+
+                                                <tr>
+                                                    <td align="center">EXTRAS</td>
+                                                    <td align="center"></td>
+                                                    <td align="center"></td>
+                                                    
+                                                    
+                                                  </tr>
+
+                                                  <tr>
+                                                      <td align="center">PASTO</td>
+                                                      <td align="center"></td>
+                                                      <td align="center"></td>
+                                                      
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td align="center">PINTURA</td>
+                                                        <td align="center"></td>
+                                                        <td align="center"></td>
+                                                        
+                                                      </tr>
+
+                                                      <tr>
+                                                          <td align="center">CASETA</td>
+                                                          <td align="center"></td>
+                                                          <td align="center"></td>
+                                                          
+                                                        </tr>
+                                      </thead>
+                                    </table>
+  
+                        </div>
+                      </div>
+                      </div>
+                      
+                    </div>
+                    <!-- /col-lg-8 -->
+                  </div>
+                  <!-- /row -->
+                </div>
+                <!-- /tab-pane -->
+              </div>
+              <!-- /tab-content -->
+            </div>
+            <!-- /panel-body -->
+          </div>
+          <!-- /col-lg-12 -->
+        </div>
+        <!-- /row -->
+      </div>
+      <!-- /container -->
+  
+
+
+
+  </section>
+

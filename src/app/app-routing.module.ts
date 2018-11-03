@@ -10,18 +10,18 @@ import { ComentsComponent } from './pages/coments/coments.component';
 import { CommonModule } from '@angular/common';
 
 const app_routes: Routes = [
-  { path: 'init', component: InitComponent },
+  { path: 'init', component: DeptosComponent },
   { path: 'deptos', component: DeptosComponent },
   { path: 'tareas', component: TareasComponent },
   { path: 'props', component: PropsComponent },
   { path: 'calidad', component: CalidadComponent },
   { path: 'coments', component: ComentsComponent },
-  { path: '**', pathMatch: 'full', redirectTo: 'init' },
+  { path: '**', pathMatch: 'full', redirectTo: 'deptos' },
 ];
 
 @NgModule({
   imports: [
-    RouterModule.forRoot( app_routes ),
+    RouterModule.forRoot( app_routes, { useHash: true } ),
     CommonModule
   ],
   exports: [

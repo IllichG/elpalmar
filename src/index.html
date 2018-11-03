@@ -2,7 +2,7 @@
 <html lang="es">
 
 <head>
-  <base href="/">
+  
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
@@ -18,12 +18,23 @@
   <link href="assets/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!--external css-->
   <link href="assets/lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="assets/lib/fancybox/jquery.fancybox.css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="assets/lib/bootstrap-datepicker/css/datepicker.css" />
+  <link rel="stylesheet" type="text/css" href="assets/lib/bootstrap-daterangepicker/daterangepicker.css" />
   <link rel="stylesheet" type="text/css" href="assets/css/zabuto_calendar.css">
   <link rel="stylesheet" type="text/css" href="assets/lib/gritter/css/jquery.gritter.css" />
+  <link rel="stylesheet" href="assets/css/to-do.css">
   <!-- Custom styles for this template -->
   <link href="assets/css/style.css" rel="stylesheet">
   <link href="assets/css/style-responsive.css" rel="stylesheet">
   <script src="assets/lib/chart-master/Chart.js"></script>
+  <script src="assets/lib/jquery/jquery.min.js"></script>
+
+
+  <script  src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="   crossorigin="anonymous"></script>
+  <script src="bootstable.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
   <!-- =======================================================
     Template Name: Dashio
@@ -55,7 +66,20 @@
   <!--script for this page-->
   <script src="assets/lib/sparkline-chart.js"></script>
   <script src="assets/lib/zabuto_calendar.js"></script>
+  <!--script for this page-->
+  <script src="assets/lib/jquery-ui-1.9.2.custom.min.js"></script>
+  <!--custom switch-->
+  <script src="assets/lib/bootstrap-switch.js"></script>
+  <!--custom tagsinput-->
+  <script src="assets/lib/jquery.tagsinput.js"></script>
 
+  <!--Contactform Validation-->
+  <script src="assets/lib/php-mail-form/validate.js"></script>
+
+  <script src="assets/lib/fancybox/jquery.fancybox.js"></script>
+
+ 
+  
   <script type="application/javascript">
     $(document).ready(function() {
       $("#date-popover").popover({
@@ -98,6 +122,35 @@
       console.log('nav ' + nav + ' to: ' + to.month + '/' + to.year);
     }
   </script>
+
+
+
+
+  
+    <script>
+      $(document).ready(function() {
+
+CalcularTotal();
+
+});
+function CalcularTotal()
+{
+var totals = [0, 0, 0, 0, 0, 0, 0, 0];
+var $filas= $("#tabla tr:not('.total, .encabezado')");
+
+ $filas.each(function() {
+   $(this).find('td').each(function(i) {
+     if (i != 0)
+       totals[i - 1] += parseInt($(this).html());
+   });
+ });
+ $(".total td").each(function(i) {
+   if (i != 0)
+     $(this).html(totals[i - 1]);
+ });
+}
+    </script>
+  
 </body>
 
 </html>
